@@ -52,7 +52,16 @@ coins = {quarter:0, dime:0, nickel:0, penny:0}
 	 	end
 	end
 
-
+coins
 
 end	
 
+def hash_remover(key,value)
+	"#{key}: #{value}"
+end
+
+def seperator(arr)
+	if arr.any?
+		arr.pop
+	end
+end

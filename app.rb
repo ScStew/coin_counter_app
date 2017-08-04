@@ -34,3 +34,16 @@ get '/coin' do
 	lname = params[:lname]
 	erb :coins ,locals:{fname:fname,lname:lname}
 end
+
+post '/coins' do
+	fname = params[:fname]
+	lname = params[:lname]
+	money = params[:money]
+	redirect '/coin_split?fname=' + fname + "&lname=" + lname + "&money=" + money
+end
+
+get '/coin_split' do
+	fname = params[:fname]
+	lname = params[:lname]
+	money = params[:money]
+	

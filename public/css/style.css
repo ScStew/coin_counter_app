@@ -1,0 +1,21 @@
+.color{
+	color:gold;
+}
+
+.font{
+	font-size:15vh;
+}
+
+.center{
+	text-align:center;
+}
+
+header{
+	color:gold;
+	font-size:15vh;
+	text-align:center;
+	border-bottom-color:gold;
+	border-bottom-style:groove;
+	border-bottom-width:1vh;
+
+}

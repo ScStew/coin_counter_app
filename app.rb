@@ -66,3 +66,8 @@ get '/coin_split' do
 	erb :results, locals:{fname: fname, lname:lname, money:money, num1:num1, num2:num2, num3:num3, num4:num4}
 end
 
+post '/try_again' do
+	fname = params[:fname]
+	lname = params[:lname]
+	redirect '/coin?fname=' + fname + '&lname=' + lname
+end

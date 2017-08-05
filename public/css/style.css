@@ -1,21 +1,75 @@
-.color{
-	color:gold;
-}
 
-.font{
-	font-size:15vh;
-}
-
-.center{
+ul{
+	list-style:none;
+	margin:0;
+	padding:0;
 	text-align:center;
+	border-color:gold;
+	border-style:groove;
+	border-width:1vh;
+	background-color:tan;
+	background-image:url(/images/coin_gif.gif);
+	background-repeat:no-repeat;
+	background-size:contain;
 }
+
+li{
+	font-size:3vh;
+	display:inline;
+	float:center;
+	margin:0;
+}
+
+li a {
+	display:inline-block;
+    color: white;
+    text-align: center;
+    padding: 3vh 15vh;
+}
+
+li a:hover{
+	background-color:black;
+}
+
+
 
 header{
 	color:gold;
 	font-size:15vh;
 	text-align:center;
-	border-bottom-color:gold;
-	border-bottom-style:groove;
-	border-bottom-width:1vh;
+	border-color:gold;
+	border-style:groove;
+	border-width:1vh;
+	background-image:url(/images/blue_canvas.jpg);
 
+}
+
+body{
+	background-image:url(/images/treasure_background.jpg);
+	background-position-x:center;
+	background-size:cover;
+	background-color:navy;
+	background-repeat:no-repeat;
+	text-align:center;
+	font-size: 8vh;
+	color:white;
+}
+
+form{
+	font-size:10vh;
+}
+
+footer{
+
+	background-color:tan;
+	border-style:groove;
+	border-color:gold;
+	border-width:1vh;
+	position:fixed;
+	bottom:0;
+	margin:0;
+	padding-bottom:0;
+	font-size:3vh;
+	padding:15;
+	text-shadow: -2px 0px 4px black;
 }

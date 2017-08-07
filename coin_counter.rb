@@ -22,35 +22,7 @@ coins = {quarter:0, dime:0, nickel:0, penny:0}
 	 	coins[:penny] += 1
 	end
 
-	if coins[:penny] > 1
-		pen = coins[:penny]
-		coins.delete(:penny)
-		coins[:pennies] = pen
-	end
-
-	if coins[:dime] > 1
-		dim = coins[:dime]
-		coins.delete(:dime)
-		coins[:dimes] = dim
-	end
-
-	if coins[:quarter] > 1
-		qua = coins[:quarter]
-		coins.delete(:quarter)
-		coins[:quarters] = qua
-	end
-
-	# if coins[:dime] > 1
-	# 	dim = coins[:dime]
-	# 	coins.delete(:dime)
-	# 	coins[:dimes] = dim
-	# end
-
-	# if coins[:nickel] > 1
-	# 	nic = coins[:nickel]
-	# 	coins.delete(:nickel)
-	# 	coins[:nickels] = nic
-	# end
+	updated_hash = {}
 
 	# if coins[:penny] > 1
 	# 	pen = coins[:penny]
@@ -58,13 +30,49 @@ coins = {quarter:0, dime:0, nickel:0, penny:0}
 	# 	coins[:pennies] = pen
 	# end
 
-	coins.each do |key,value|
+	# if coins[:dime] > 1
+	# 	dim = coins[:dime]
+	# 	coins.delete(:dime)
+	# 	coins[:dimes] = dim
+	# end
+
+	qua = coins[:quarter]
+	dim = coins[:dime]
+	nic = coins[:nickel]
+	pen = coins[:penny]
+
+	if coins[:quarter] > 1
+		updated_hash[:quarters] = qua
+	else
+		updated_hash[:quarter] = qua
+	end
+
+	if coins[:dime] > 1
+		updated_hash[:dimes] = dim
+	else
+		updated_hash[:dime] = dim
+	end
+
+	if coins[:nickel] > 1
+		updated_hash[:nickels] = nic
+	else
+		updated_hash[:nickel] = nic
+	end
+
+	if coins[:penny] > 1
+		updated_hash[:pennies] = pen
+	else
+		updated_hash[:penny] = pen
+	end
+
+	updated_hash.each do |key,value|
 	 	if value == 0
-	 		coins.delete(key)
+	 		updated_hash.delete(key)
 	 	end
 	end
 
-coins
+updated_hash
+
 
 end	
 
@@ -74,6 +82,6 @@ end
 
 def seperator(arr)
 	if arr.any?
-		arr.pop
+		arr.slice!(0)
 	end
 end

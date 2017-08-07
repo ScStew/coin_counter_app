@@ -52,10 +52,10 @@ get '/coin_split' do
 		coinshash.each do |key, value|
 			coinsarr << hash_remover(key,value)
 		end	
-	num1 = ""
-	num2 = ""
-	num3 = ""
-	num4 = ""	
+	# num1 = ""
+	# num2 = ""
+	# num3 = ""
+	# num4 = ""	
 
 	num1 = seperator(coinsarr)
 	num2 = seperator(coinsarr)

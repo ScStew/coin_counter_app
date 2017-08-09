@@ -1,11 +1,11 @@
 The least amount of coins needed to make <%=money%><br>
-<%=num1%><br>
-<%=num2%><br>
-<%=num3%><br>
-<%=num4%>
-
-
-<%=date%>
+<div class = "results" onmouseover="color_red(this)" onmouseout="color_blue(this)">
+	<%=num1%><br>
+	<%=num2%><br>
+	<%=num3%><br>
+	<%=num4%><br>
+	<%=date%>
+</div>
 <!--body onload = "background_changer()"> -->
 <form method = "post" action = "try_again">
 	<input type = "hidden" name = "fname" value = "<%=fname%>">
@@ -35,4 +35,12 @@ function background_changer(){
 	document.body.style.backgroundImage = "url(" + images[count] +")"
 }
 
+function color_red(x){
+ x.style.color = "red"
+
+}
+
+function color_blue(x){
+	x.style.color = "blue"
+}
 </script>

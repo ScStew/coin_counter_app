@@ -1,8 +1,20 @@
 How much change do you want to calculate <%=fname%>
 
+
+
+<script>
+var x = new Date();
+function datefun(){
+	alert(x)
+document.getElementById('date1').value = x
+}
+</script>
+
 <form method = post action = "coins">
 <input type = "number" name = "money" required>
 <input type = "hidden" name = "fname" value = "<%=fname%>">
 <input type = "hidden" name = "lname" value = "<%=fname%>">
-<input type = "submit" value = "enter">
+<input type = "submit" value = "enter"
+ button onclick="datefun()"></button>
+<input type = "hidden" id = 'date1' name = "date">
 </form>

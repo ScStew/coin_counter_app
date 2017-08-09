@@ -6,10 +6,33 @@ The least amount of coins needed to make <%=money%><br>
 
 
 <%=date%>
-
-
+<!--body onload = "background_changer()"> -->
 <form method = "post" action = "try_again">
 	<input type = "hidden" name = "fname" value = "<%=fname%>">
 	<input type = "hidden" name = "lname" value = "<%=fname%>">
 	<input type = "submit" value = "try again">
 </form>
+
+<button type = "button" onclick= "background_changer()">Change background</button>
+
+
+<script>
+
+// var images = ["/images/mario.gif",
+// 			  "/images/banjo.gif",
+// 			  "/images/kirby.gif",
+// 			  "/images/scenery.gif"]
+
+// var randimages = Math.floor(Math.random() * images.length)		  
+
+function background_changer(){
+	var images = ["/images/mario.gif",
+			  "/images/banjo.gif",
+			  "/images/kirby.gif",
+			  "/images/scenery.gif"]
+
+	var count = Math.floor(Math.random() * images.length)
+	document.body.style.backgroundImage = "url(" + images[count] +")"
+}
+
+</script>
